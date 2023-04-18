@@ -1,0 +1,31 @@
+{
+  "name": "hpe-design-experiment",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --force",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "grommet-exp": "file:.yalc/grommet-exp",
+    "grommet-exp-theme": "file:.yalc/grommet-exp-theme",
+    "hpe-design-tokens": "file:.yalc/hpe-design-tokens",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-image": "^3.0.2",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vanilla-extract/css": "^1.9.5",
+    "@vanilla-extract/recipes": "^0.3.0",
+    "@vanilla-extract/vite-plugin": "^3.8.0",
+    "@vitejs/plugin-react": "^3.1.0",
+    "grommet-icons": "^4.9.0",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0"
+  }
+}
