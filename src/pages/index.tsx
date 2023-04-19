@@ -1,4 +1,5 @@
-import { Box, Grid, Heading, Page, PageContent } from "grommet";
+import { Box, Heading, Page, PageContent } from "grommet-exp";
+import { Grid } from "grommet";
 import { Card, Toolbar, HeroCarousel, InPageNav, LeftNav } from "../components";
 import data from "../data.json";
 

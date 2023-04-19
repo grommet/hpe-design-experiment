@@ -1,10 +1,11 @@
-import { Box, FormField, Select, TextInput } from "grommet";
+import { Box, FormField } from "grommet-exp";
+import { Select, TextInput } from "grommet";
 import { Search } from "grommet-icons";
 
 export const Toolbar = () => {
   return (
     <Box direction="row" align="end" gap="small">
-      <Box flex margin={{ bottom: "xsmall" }}>
+      <Box flex>
         <TextInput icon={<Search />} placeholder="Search" reverse />
       </Box>
       <Box flex>

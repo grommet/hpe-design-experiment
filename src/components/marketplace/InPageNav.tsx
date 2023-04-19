@@ -1,5 +1,5 @@
-import { Box } from "grommet";
+import { Box } from "grommet-exp";
 
 export const InPageNav = () => {
-  return <Box background="background-back"></Box>;
+  return <Box background="back"></Box>;
 };

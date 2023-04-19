@@ -1,12 +1,5 @@
-import {
-  Button,
-  Form,
-  FormField,
-  Page,
-  PageContent,
-  PageHeader,
-  TextInput,
-} from "grommet";
+import { Button, Page, PageContent, PageHeader } from "grommet-exp";
+import { Form, FormField, TextInput } from "grommet";
 export const Login = ({
   setAuthenticated,
 }: {
@@ -30,12 +23,12 @@ export const Login = ({
           <FormField
             label="Password"
             name="password"
-            contentProps={{ width: "medium" }}
             htmlFor="password"
+            contentProps={{ width: "medium" }}
           >
             <TextInput type="password" name="password" id="password" />
           </FormField>
-          <Button label="Submit" type="submit" primary />
+          <Button label="Submit" type="submit" kind="primary" />
         </Form>
       </PageContent>
     </Page>

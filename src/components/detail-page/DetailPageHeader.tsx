@@ -1,4 +1,4 @@
-import { Box, Button, Heading, Image, Text } from "grommet";
+import { Box, Button, Heading, Text } from "grommet-exp";
 import { Share } from "grommet-icons";
 
 type PageType = {
@@ -12,19 +12,15 @@ export const DetailPageHeader = ({ page }: { page: PageType }) => {
   return (
     <Box gap="medium">
       <Box width="xsmall">
-        <Image src={page.src} alt={`${page.title} logo`} />
+        <img src={page.src} alt={`${page.title} logo`} />
       </Box>
       <Box gap="xsmall">
-        <Heading level={1} margin="none">
-          {page.title}
-        </Heading>
-        <Text margin="none" size="large">
-          {page.author}
-        </Text>
+        <Heading level={1}>{page.title}</Heading>
+        <Text size="large">{page.author}</Text>
       </Box>
       <Box align="start" gap="medium">
-        <Button label="Test drive" icon={<Share />} primary reverse />
-        <Button label="Contact sales" secondary />
+        <Button label="Test drive" icon={<Share />} kind="primary" reverse />
+        <Button label="Contact sales" kind="secondary" />
       </Box>
     </Box>
   );

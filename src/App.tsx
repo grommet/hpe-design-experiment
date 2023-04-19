@@ -5,7 +5,8 @@ import {
   LoaderFunction,
   ActionFunction,
 } from "react-router-dom";
-import { Grommet } from "grommet";
+import { Grommet } from "grommet-exp";
+import { Grommet as OldGrommet } from "grommet";
 import { hpe } from "grommet-theme-hpe";
 import { Login } from "./components/Login";
 interface IRoute {
@@ -62,12 +63,14 @@ const App = () => {
   }, []);
 
   return (
-    <Grommet theme={hpe} full="min">
-      {authenticated ? (
-        <RouterProvider router={router} />
-      ) : (
-        <Login setAuthenticated={setAuthenticated} />
-      )}
+    <Grommet>
+      <OldGrommet theme={hpe}>
+        {authenticated ? (
+          <RouterProvider router={router} />
+        ) : (
+          <Login setAuthenticated={setAuthenticated} />
+        )}
+      </OldGrommet>
     </Grommet>
   );
 };

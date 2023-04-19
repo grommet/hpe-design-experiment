@@ -1,15 +1,6 @@
 import { useParams } from "react-router-dom";
-import {
-  Box,
-  Grid,
-  Image,
-  Markdown,
-  Page,
-  PageContent,
-  Paragraph,
-  Tabs,
-  Tab,
-} from "grommet";
+import { Box, Page, PageContent, Paragraph } from "grommet-exp";
+import { Grid, Markdown, Tabs, Tab } from "grommet";
 import { DetailPageHeader, Details } from "../components";
 import data from "../data.json";
 import { nameToSlug } from "../utils";
@@ -42,10 +33,9 @@ const Detail = () => {
                       {page.overview}
                     </Markdown>
                     <Box width="75%">
-                      <Image
+                      <img
                         src="/overview-1.png"
                         alt={`${page.title} preview`}
-                        fit="contain"
                       />
                     </Box>
                   </Box>

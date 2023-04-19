@@ -1,4 +1,5 @@
-import { Anchor, Box, Heading, NameValueList, NameValuePair } from "grommet";
+import { Anchor, Box, Heading } from "grommet-exp";
+import { NameValueList, NameValuePair } from "grommet";
 
 const details = {
   availableRegions: "Available regions",
@@ -20,10 +21,11 @@ type PageType = {
 export const Details = ({ page }: { page: PageType }) => {
   return (
     <Box gap="small">
-      <Heading level={2} margin="none">
-        Details
-      </Heading>
-      <NameValueList pairProps={{ direction: "column" }}>
+      <Heading level={2}>Details</Heading>
+      <NameValueList
+        pairProps={{ direction: "column" }}
+        valueProps={{ align: "start" }}
+      >
         {Object.entries(page.details).map(([key, value]) => {
           let renderValue;
           if (Array.isArray(value))
@@ -31,9 +33,7 @@ export const Details = ({ page }: { page: PageType }) => {
               (d, index) => `${d}${index < value.length - 1 ? ", " : ""}`
             );
           else if (key === "documentation" || key === "termsOfService")
-            renderValue = (
-              <Anchor alignSelf="start" label={value} href={value} />
-            );
+            renderValue = <Anchor href={value}>{value}</Anchor>;
           else if (key === "published")
             renderValue = new Date(value).toLocaleDateString();
           else renderValue = value;
