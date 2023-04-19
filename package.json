@@ -10,10 +10,7 @@
   },
   "dependencies": {
     "grommet": "^2.31.0",
-    "grommet-exp": "file:.yalc/grommet-exp",
-    "grommet-exp-theme": "file:.yalc/grommet-exp-theme",
     "grommet-theme-hpe": "^5.0.2",
-    "hpe-design-tokens": "file:.yalc/hpe-design-tokens",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0",
