@@ -6,3 +6,4 @@ node_modules/
 .yalc
 dist
 .DS_Store
+.env

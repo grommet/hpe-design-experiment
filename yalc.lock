@@ -1,16 +1,16 @@
 {
   "version": "v1",
   "packages": {
-    "grommet-exp": {
-      "signature": "d934498406aada3d5a3095becd7f082d",
+    "hpe-design-tokens": {
+      "signature": "aafd915145a3e5afde7099c57d93a253",
       "file": true
     },
     "grommet-exp-theme": {
-      "signature": "39d39a1e43d81a6338e49bbb66177e97",
+      "signature": "68a70adbcfa1228a219ca63eea4eb3b2",
       "file": true
     },
-    "hpe-design-tokens": {
-      "signature": "d597a2ec6bc088ac1936f1f6c08fd267",
+    "grommet-exp": {
+      "signature": "e308a461143cfa29c8f50d8f82c07beb",
       "file": true
     }
   }
