@@ -1,14 +1,20 @@
-import { Box, Button, Heading } from "grommet-exp";
+import { Box, Button, Nav, Text } from "grommet-exp";
+import { ContentContainer } from "../ContentContainer";
 
 export const LeftNav = () => {
   return (
-    <Box gap="medium">
-      <Heading level={1}>Services</Heading>
-      <Box gap="small">
-        <Button label="My services" />
-        <Button label="Subscriptions" />
-        <Button label="Marketplace" active />
-      </Box>
-    </Box>
+    <ContentContainer>
+      <Text weight="medium" color="strong" size="large">
+        Discover and manage services
+      </Text>
+      <Nav>
+        <Box gap="small">
+          <Button label="My services" />
+          <Button label="Subscriptions" />
+          <Button label="Catalog" />
+          <Button label="Marketplace" active />
+        </Box>
+      </Nav>
+    </ContentContainer>
   );
 };

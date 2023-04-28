@@ -1,6 +1,14 @@
 import { useParams } from "react-router-dom";
-import { Box, Page, PageContent, Paragraph } from "grommet-exp";
-import { Grid, Markdown, Tabs, Tab } from "grommet";
+import {
+  Box,
+  Carousel,
+  Page,
+  PageContent,
+  Paragraph,
+  Tab,
+  Tabs,
+} from "grommet-exp";
+import { Markdown } from "grommet";
 import { DetailPageHeader, Details } from "../components";
 import data from "../data.json";
 import { nameToSlug } from "../utils";
@@ -12,46 +20,38 @@ const Detail = () => {
   );
 
   return (
-    <Page kind="full">
-      <PageContent>
-        <Grid
-          columns={["auto", "flex", "medium"]}
-          gap="xlarge"
-          pad={{ vertical: "large" }}
-        >
+    <Page kind="wide">
+      <Box pad={{ vertical: "large" }}>
+        <PageContent>
           <DetailPageHeader page={page} />
-          <Box>
+          <Box background="front" pad="medium" round="xlarge">
             <Tabs>
-              {page.overview && (
-                <Tab title="Overview">
-                  <Box gap="large">
-                    <Markdown
-                      components={{
-                        p: <Paragraph size="large" />,
-                      }}
-                    >
-                      {page.overview}
-                    </Markdown>
-                    <Box width="75%">
-                      <img
-                        src="/overview-1.png"
-                        alt={`${page.title} preview`}
-                      />
-                    </Box>
-                  </Box>
-                </Tab>
-              )}
-              <Tab title="Regions">
+              <Tab label="Overview">
+                <Box gap="large">
+                  <Markdown
+                    components={{
+                      p: <Paragraph size="large" />,
+                    }}
+                  >
+                    {page.overview}
+                  </Markdown>
+                  <Carousel>
+                    <img src="/overview-1.png" alt={`${page.title} preview`} />
+                    <img src="/overview-1.png" alt={`${page.title} preview`} />
+                  </Carousel>
+                </Box>
+              </Tab>
+              <Tab label="Regions">
                 <Box pad={{ vertical: "medium" }}>Tbd</Box>
               </Tab>
-              <Tab title="Related services">
+              <Tab label="Related services">
                 <Box pad={{ vertical: "medium" }}>Tbd</Box>
               </Tab>
             </Tabs>
           </Box>
           <Details page={page} />
-        </Grid>
-      </PageContent>
+        </PageContent>
+      </Box>
     </Page>
   );
 };

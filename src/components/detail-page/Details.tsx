@@ -1,5 +1,10 @@
-import { Anchor, Box, Heading } from "grommet-exp";
-import { NameValueList, NameValuePair } from "grommet";
+import {
+  Anchor,
+  Box,
+  Heading,
+  NameValueList,
+  NameValuePair,
+} from "grommet-exp";
 
 const details = {
   availableRegions: "Available regions",
@@ -20,7 +25,7 @@ type PageType = {
 
 export const Details = ({ page }: { page: PageType }) => {
   return (
-    <Box gap="small">
+    <Box gap="small" background="front" pad="medium" round="xlarge">
       <Heading level={2}>Details</Heading>
       <NameValueList
         pairProps={{ direction: "column" }}

@@ -64,7 +64,7 @@ const App = () => {
 
   return (
     <Grommet>
-      <OldGrommet theme={hpe}>
+      <OldGrommet theme={hpe} background="background-back" full="min">
         {authenticated ? (
           <RouterProvider router={router} />
         ) : (
