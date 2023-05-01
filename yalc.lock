@@ -2,17 +2,17 @@
   "version": "v1",
   "packages": {
     "grommet-exp": {
-      "signature": "951589cded790acc9b6e9c4553fd0c4e",
+      "signature": "7d7ab46c248d1847f4ac5c38626878c4",
       "file": true,
       "replaced": "https://github.com/grommet/grommet-exp/tarball/stable"
     },
     "grommet-exp-theme": {
-      "signature": "75d4a62c3e8278ba07e5ebfbf79af02e",
+      "signature": "25bba029c092ed6848368bb0c298b1eb",
       "file": true,
       "replaced": "https://github.com/grommet/grommet-exp-theme/tarball/stable"
     },
     "hpe-design-tokens": {
-      "signature": "b3c57ed6179eb2622948b1dcf08913ed",
+      "signature": "7db7814182f8918651e7507adb87b759",
       "file": true,
       "replaced": "https://github.com/grommet/hpe-design-tokens/tarball/stable"
     }

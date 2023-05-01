@@ -18,9 +18,9 @@
     "@babel/highlight" "^7.18.6"
 
 "@babel/compat-data@^7.21.5":
-  version "7.21.5"
-  resolved "https://registry.yarnpkg.com/@babel/compat-data/-/compat-data-7.21.5.tgz#887a54ebe20c9f21edf27caf4ffcf8da6fdd5bd2"
-  integrity sha512-M+XAiQ7GzQ3FDPf0KOLkugzptnIypt0X0ma0wmlTKPR3IchgNFdx2JXxZdvd18JY5s7QkaFD/qyX0dsMpog/Ug==
+  version "7.21.7"
+  resolved "https://registry.yarnpkg.com/@babel/compat-data/-/compat-data-7.21.7.tgz#61caffb60776e49a57ba61a88f02bedd8714f6bc"
+  integrity sha512-KYMqFYTaenzMK4yUtf4EW9wc4N9ef80FsbMtkwool5zpwl4YrT1SdWYSTRcT94KO4hannogdS+LxY7L+arP3gA==
 
 "@babel/core@^7.20.12", "@babel/core@^7.20.7":
   version "7.21.5"
@@ -971,8 +971,8 @@ hoist-non-react-statics@^3.0.0, hoist-non-react-statics@^3.2.0:
 
 "hpe-design-tokens@https://github.com/grommet/hpe-design-tokens/tarball/stable":
   version "0.1.0"
-  uid "2b2002b4f3367b8adf2c2e507775413fe037a613"
-  resolved "https://github.com/grommet/hpe-design-tokens/tarball/stable#2b2002b4f3367b8adf2c2e507775413fe037a613"
+  uid "4cf5f478dd16193809deaf51e35bf40b02b49307"
+  resolved "https://github.com/grommet/hpe-design-tokens/tarball/stable#4cf5f478dd16193809deaf51e35bf40b02b49307"
 
 javascript-stringify@^2.0.1:
   version "2.1.0"
@@ -1214,9 +1214,9 @@ regenerator-runtime@^0.13.11:
   integrity sha512-oyrU88skkMtDdauHDuKVrgR+zuItqr6/c//FXzvmxRGMexSDc6hNvJInGW3LL46n+8b50RykrvwSUIIQH2LQ5A==
 
 rollup@^3.21.0:
-  version "3.21.0"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-3.21.0.tgz#0a71517db56e150222670f88e5e7acfa4fede7c8"
-  integrity sha512-ANPhVcyeHvYdQMUyCbczy33nbLzI7RzrBje4uvNiTDJGIMtlKoOStmympwr9OtS1LZxiDmE2wvxHyVhoLtf1KQ==
+  version "3.21.2"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-3.21.2.tgz#c3a06bc8d235a0c0a8f1f7d9da73426f53706bdc"
+  integrity sha512-c4vC+JZ3bbF4Kqq2TtM7zSKtSyMybFOjqmomFax3xpfYaPZDZ4iz8NMIuBRMjnXOcKYozw7bC6vhJjiWD6JpzQ==
   optionalDependencies:
     fsevents "~2.3.2"
 
