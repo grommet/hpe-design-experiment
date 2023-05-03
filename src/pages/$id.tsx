@@ -1,4 +1,5 @@
-import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import {
   Box,
   Carousel,
@@ -19,6 +20,17 @@ const Detail = () => {
     (value) => nameToSlug(value.title) === id
   );
 
+  const navigate = useNavigate();
+  useEffect(() => {
+    const changeRoute = () => {
+      navigate(window.location.pathname);
+    };
+
+    window.addEventListener("routeChange", changeRoute);
+    changeRoute();
+    return () => window.removeEventListener("routeChange", changeRoute);
+  }, []);
+
   return (
     <Page kind="wide">
       <Box pad={{ vertical: "large" }}>
@@ -37,7 +49,7 @@ const Detail = () => {
                   </Markdown>
                   <Carousel>
                     <img src="/overview-1.png" alt={`${page.title} preview`} />
-                    <img src="/overview-1.png" alt={`${page.title} preview`} />
+                    <img src="/overview-2.png" alt={`${page.title} preview`} />
                   </Carousel>
                 </Box>
               </Tab>

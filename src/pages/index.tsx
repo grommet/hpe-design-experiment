@@ -1,12 +1,17 @@
+import { useEffect } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import {
+  Anchor,
   Box,
   Button,
   Grid,
   Heading,
   Icon,
+  Meter,
   Nav,
   Page,
   PageContent,
+  PageHeader,
   Paragraph,
   Text,
 } from "grommet-exp";
@@ -14,6 +19,13 @@ import domain from "grommet-icons/img/domain.svg";
 import cloudDownload from "grommet-icons/img/cloud-download.svg";
 import database from "grommet-icons/img/database.svg";
 import { ContentContainer } from "../components";
+import {
+  lowerGrid,
+  mainContainer,
+  mainGrid,
+  rightGridContainer,
+  upperGrid,
+} from "../styles.css";
 
 const actions = [
   "Add devices",
@@ -43,10 +55,31 @@ const workflows = [
 ];
 
 const Index = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    const changeRoute = () => {
+      navigate(window.location.pathname);
+    };
+
+    window.addEventListener("routeChange", changeRoute);
+    changeRoute();
+    return () => window.removeEventListener("routeChange", changeRoute);
+  }, []);
+
   return (
     <Page kind="full">
-      <PageContent>
-        <Grid columns="medium-flex" gap="large" pad={{ vertical: "large" }}>
+      <PageContent className={mainContainer} gap="medium">
+        <PageHeader
+          // icon={<Box>hi</Box>}
+          title="Dashboard"
+          actions={
+            <Box direction="row-responsive" gap="small">
+              <Button label="Customize" kind="secondary" />
+              <Button label="Add widget" kind="primary" />
+            </Box>
+          }
+        />
+        <Grid gap="medium" pad={{ bottom: "large" }} className={mainGrid}>
           <Box gap="medium">
             <ContentContainer>
               <Heading level={2}>Quick actions</Heading>
@@ -58,8 +91,8 @@ const Index = () => {
             </ContentContainer>
             <ContentContainer>
               <Heading level={2}>Workflows</Heading>
-              {workflows.map((workflow) => (
-                <Box align="start" gap="xsmall">
+              {workflows.map((workflow, index) => (
+                <Box align="start" gap="xsmall" key={index}>
                   <Icon src={workflow.icon} size="xlarge" />
                   <Text>{workflow.title}</Text>
                   <Paragraph size="small" color="weak">
@@ -76,38 +109,56 @@ const Index = () => {
   );
 };
 
-const MainContent = () => (
-  <Box gap="medium">
-    <Grid columns={2} gap="medium">
-      <ContentContainer align="start">
-        <Heading level={2}>Recommendations</Heading>
-        <Box>
-          <Text size="xlarge">126 Wellness recommendations</Text>
-          <Paragraph size="small">
-            Recommendations are based on your current environment and best
-            practices.
-          </Paragraph>
-        </Box>
-        <Button label="View all recommendations" kind="secondary" />
-      </ContentContainer>
-      <ContentContainer align="start">
-        <Heading level={2}>Cases</Heading>
-        <Box>Meter goes here</Box>
-        <Button label="View all cases" kind="secondary" />
-      </ContentContainer>
-    </Grid>
-    <Grid columns="flex-medium" gap="medium">
-      <ContentContainer align="start">
-        <Heading level={2}>Locations</Heading>
-        <Box>map goes here</Box>
-      </ContentContainer>
-      <ContentContainer align="start">
-        <Heading level={2}>Cost and usage</Heading>
-        <Box>Meter goes here</Box>
-        <Button label="View consumption" kind="secondary" />
-      </ContentContainer>
-    </Grid>
-  </Box>
-);
+const MainContent = () => {
+  return (
+    <Box gap="medium" className={rightGridContainer}>
+      <Grid gap="medium" className={upperGrid}>
+        <ContentContainer align="start">
+          <Heading level={2}>Recommendations</Heading>
+          <Box gap="small">
+            <Text size="xlarge">126 Wellness recommendations</Text>
+            <Paragraph size="small">
+              Recommendations are based on your current environment and best
+              practices.
+            </Paragraph>
+            <Meter
+              thickness="small"
+              round
+              kind="qualitative"
+              values={[{ value: 60 }, { value: 35 }, { value: 5 }]}
+            />
+          </Box>
+          <Button label="View all recommendations" kind="secondary" />
+        </ContentContainer>
+        <ContentContainer align="start">
+          <Heading level={2}>Cases</Heading>
+          <Meter
+            type="circle"
+            size="small"
+            kind="qualitative"
+            values={[{ value: 60 }, { value: 35 }, { value: 5 }]}
+          />
+          <Button label="View all cases" kind="secondary" />
+        </ContentContainer>
+      </Grid>
+      <Grid gap="medium" className={lowerGrid}>
+        <ContentContainer align="start">
+          <Heading level={2}>Locations</Heading>
+          <Box>map goes here</Box>
+        </ContentContainer>
+        <ContentContainer align="start">
+          <Heading level={2}>Cost and usage</Heading>
+          <Meter
+            type="pie"
+            size="small"
+            kind="qualitative"
+            values={[{ value: 60 }, { value: 35 }, { value: 5 }]}
+          />
+          <Button label="View consumption" kind="secondary" />
+        </ContentContainer>
+      </Grid>
+    </Box>
+  );
+};
 
 export default Index;

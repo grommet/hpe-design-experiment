@@ -31,7 +31,7 @@ export const Details = ({ page }: { page: PageType }) => {
         pairProps={{ direction: "column" }}
         valueProps={{ align: "start" }}
       >
-        {Object.entries(page.details).map(([key, value]) => {
+        {Object.entries(page.details).map(([key, value], index) => {
           let renderValue;
           if (Array.isArray(value))
             renderValue = value.map(
@@ -45,7 +45,9 @@ export const Details = ({ page }: { page: PageType }) => {
 
           return (
             // @ts-ignore
-            <NameValuePair name={details[key]}>{renderValue}</NameValuePair>
+            <NameValuePair name={details[key]} key={index}>
+              {renderValue}
+            </NameValuePair>
           );
         })}
       </NameValueList>

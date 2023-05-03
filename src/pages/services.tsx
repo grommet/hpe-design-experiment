@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Anchor,
   Box,
@@ -17,7 +17,6 @@ import {
   TableBody,
   TableRow,
   TableCell,
-  Text,
 } from "grommet-exp";
 import { Card, ContentContainer, LeftNav } from "../components";
 import apps from "grommet-icons/img/apps.svg";
@@ -25,14 +24,27 @@ import list from "grommet-icons/img/list.svg";
 import previous from "grommet-icons/img/previous.svg";
 import data from "../data.json";
 import { nameToSlug } from "../utils";
+import { mainContainer, mainGrid } from "../styles.css";
 
 const categories = ["AI/ML", "Analytics", "Big Data"];
 
 const Services = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    const changeRoute = () => {
+      navigate(window.location.pathname);
+    };
+
+    window.addEventListener("routeChange", changeRoute);
+    changeRoute();
+    return () => window.removeEventListener("routeChange", changeRoute);
+  }, []);
+
   return (
     <Page kind="full">
-      <PageContent>
+      <PageContent className={mainContainer} gap="medium">
         <PageHeader
+          // icon={<Box>hi</Box>}
           title="Services"
           parent={
             <Link
@@ -53,7 +65,7 @@ const Services = () => {
             </Box>
           }
         />
-        <Grid align="start" columns="medium-flex" gap="large">
+        <Grid className={mainGrid} align="start" gap="medium">
           <LeftNav />
           <MainContent />
         </Grid>
@@ -103,8 +115,8 @@ const MainContent = () => {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {data.map((datum) => (
-              <TableRow>
+            {data.map((datum, index) => (
+              <TableRow key={index}>
                 <TableCell>
                   <Link
                     to={`/${nameToSlug(datum.title)}`}
