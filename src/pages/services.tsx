@@ -4,6 +4,7 @@ import {
   Anchor,
   Box,
   Button,
+  DataTable,
   Grid,
   FormField,
   Heading,
@@ -12,11 +13,6 @@ import {
   PageContent,
   PageHeader,
   Select,
-  Table,
-  TableHeader,
-  TableBody,
-  TableRow,
-  TableCell,
 } from "grommet-exp";
 import { Card, ContentContainer, LeftNav } from "../components";
 import apps from "grommet-icons/img/apps.svg";
@@ -57,12 +53,6 @@ const Services = () => {
                 icon={<Icon src={previous} />}
               />
             </Link>
-          }
-          actions={
-            <Box direction="row-responsive" gap="small">
-              <Button label="Customize" kind="secondary" />
-              <Button label="Add widget" kind="primary" />
-            </Box>
           }
         />
         <Grid className={mainGrid} align="start" gap="medium">
@@ -105,38 +95,36 @@ const MainContent = () => {
           </Box>
         ))
       ) : (
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableCell>Name</TableCell>
-              <TableCell>Publisher</TableCell>
-              <TableCell>Category</TableCell>
-              <TableCell>Actions</TableCell>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {data.map((datum, index) => (
-              <TableRow key={index}>
-                <TableCell>
-                  <Link
-                    to={`/${nameToSlug(datum.title)}`}
-                    style={{ textDecoration: "none", color: "inherit" }}
-                  >
-                    <Box direction="row" gap="small" align="center">
-                      <img src={datum.src} />
-                      {datum.title}
-                    </Box>
-                  </Link>
-                </TableCell>
-                <TableCell>{datum.author}</TableCell>
-                <TableCell>{datum.category || "--"}</TableCell>
-                <TableCell>
-                  <Button label="Launch" kind="secondary" />
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+        <DataTable
+          columns={[
+            {
+              property: "title",
+              header: "Name",
+              render: (datum) => (
+                <Link
+                  to={`/${nameToSlug(datum.title)}`}
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <Box direction="row" gap="small" align="center">
+                    <img src={datum.src} />
+                    {datum.title}
+                  </Box>
+                </Link>
+              ),
+            },
+            { property: "author", header: "Publisher" },
+            {
+              property: "category",
+              header: "Category",
+              render: (datum) => datum.category || "--",
+            },
+            {
+              header: "Action",
+              render: () => <Button label="Launch" kind="secondary" />,
+            },
+          ]}
+          data={data}
+        />
       )}
     </ContentContainer>
   );

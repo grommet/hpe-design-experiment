@@ -7,6 +7,7 @@ import {
   Grid,
   Heading,
   Icon,
+  Legend,
   Meter,
   Nav,
   Page,
@@ -125,18 +126,33 @@ const MainContent = () => {
               thickness="small"
               round
               kind="qualitative"
-              values={[{ value: 60 }, { value: 35 }, { value: 5 }]}
+              values={[
+                { label: "High severity", value: 60 },
+                { label: "Medium severity", value: 35 },
+                { label: "Low severity", value: 5 },
+              ]}
+            />
+            <Legend
+              values={[
+                { label: "High severity", value: 60 },
+                { label: "Medium severity", value: 35 },
+                { label: "Low severity", value: 5 },
+              ]}
             />
           </Box>
           <Button label="View all recommendations" kind="secondary" />
         </ContentContainer>
         <ContentContainer align="start">
-          <Heading level={2}>Cases</Heading>
+          <Heading level={2}>Open cases</Heading>
           <Meter
             type="circle"
             size="small"
             kind="qualitative"
-            values={[{ value: 60 }, { value: 35 }, { value: 5 }]}
+            values={[
+              { label: "Awaiting response", value: 5 },
+              { label: "Response sent", value: 6 },
+            ]}
+            legend
           />
           <Button label="View all cases" kind="secondary" />
         </ContentContainer>
@@ -152,7 +168,14 @@ const MainContent = () => {
             type="pie"
             size="small"
             kind="qualitative"
-            values={[{ value: 60 }, { value: 35 }, { value: 5 }]}
+            values={[
+              { label: "Compute", value: 90000 },
+              { label: "Storage", value: 72672 },
+              { label: "Database", value: 43732 },
+              { label: "Networking", value: 53600 },
+              { label: "Other", value: 12000 },
+            ]}
+            legend
           />
           <Button label="View consumption" kind="secondary" />
         </ContentContainer>
