@@ -1,7 +1,6 @@
 import { useEffect } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
-  Anchor,
   Box,
   Button,
   Grid,
@@ -68,7 +67,7 @@ const Index = () => {
   }, []);
 
   return (
-    <Page kind="full">
+    <Page kind="wide">
       <PageContent className={container} gap="medium">
         <PageHeader
           // icon={<Box>hi</Box>}
