@@ -37,10 +37,9 @@ const Services = () => {
   }, []);
 
   return (
-    <Page kind="full">
+    <Page kind="wide">
       <PageContent className={container} gap="medium">
         <PageHeader
-          // icon={<Box>hi</Box>}
           title="Services"
           parent={
             <Link
