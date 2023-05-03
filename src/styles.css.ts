@@ -2,7 +2,7 @@ import { style } from "@vanilla-extract/css";
 import { responsiveContainerStyle } from "grommet-exp";
 import { structuredTokens } from "hpe-design-tokens";
 
-export const mainContainer = style({
+export const container = style({
   containerType: "inline-size",
 });
 
@@ -30,3 +30,15 @@ export const lowerGrid = style([
     },
   }),
 ]);
+
+// LeftNav.tsx
+// export const navButtonContainer = style([
+//   responsiveContainerStyle({
+//     small: {
+//       flexDirection: "column",
+//     },
+//     medium: {
+//       flexDirection: "row",
+//     },
+//   }),
+// ]);

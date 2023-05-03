@@ -33,37 +33,35 @@ const Detail = () => {
 
   return (
     <Page kind="wide">
-      <Box pad={{ vertical: "large" }}>
-        <PageContent>
-          <DetailPageHeader page={page} />
-          <Box background="front" pad="medium" round="xlarge">
-            <Tabs>
-              <Tab label="Overview">
-                <Box gap="large">
-                  <Markdown
-                    components={{
-                      p: <Paragraph size="large" />,
-                    }}
-                  >
-                    {page.overview}
-                  </Markdown>
-                  <Carousel>
-                    <img src="/overview-1.png" alt={`${page.title} preview`} />
-                    <img src="/overview-2.png" alt={`${page.title} preview`} />
-                  </Carousel>
-                </Box>
-              </Tab>
-              <Tab label="Regions">
-                <Box pad={{ vertical: "medium" }}>Tbd</Box>
-              </Tab>
-              <Tab label="Related services">
-                <Box pad={{ vertical: "medium" }}>Tbd</Box>
-              </Tab>
-            </Tabs>
-          </Box>
-          <Details page={page} />
-        </PageContent>
-      </Box>
+      <PageContent align="start">
+        <DetailPageHeader page={page} />
+        <Box background="front" pad="medium" round="xlarge">
+          <Tabs>
+            <Tab label="Overview">
+              <Box gap="large">
+                <Markdown
+                  components={{
+                    p: <Paragraph size="large" />,
+                  }}
+                >
+                  {page.overview}
+                </Markdown>
+                <Carousel>
+                  <img src="/overview-1.png" alt={`${page.title} preview`} />
+                  <img src="/overview-2.png" alt={`${page.title} preview`} />
+                </Carousel>
+              </Box>
+            </Tab>
+            <Tab label="Regions">
+              <Box pad={{ vertical: "medium" }}>Tbd</Box>
+            </Tab>
+            <Tab label="Related services">
+              <Box pad={{ vertical: "medium" }}>Tbd</Box>
+            </Tab>
+          </Tabs>
+        </Box>
+        <Details page={page} />
+      </PageContent>
     </Page>
   );
 };

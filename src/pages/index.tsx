@@ -21,7 +21,7 @@ import database from "grommet-icons/img/database.svg";
 import { ContentContainer } from "../components";
 import {
   lowerGrid,
-  mainContainer,
+  container,
   mainGrid,
   rightGridContainer,
   upperGrid,
@@ -68,7 +68,7 @@ const Index = () => {
 
   return (
     <Page kind="full">
-      <PageContent className={mainContainer} gap="medium">
+      <PageContent className={container} gap="medium">
         <PageHeader
           // icon={<Box>hi</Box>}
           title="Dashboard"

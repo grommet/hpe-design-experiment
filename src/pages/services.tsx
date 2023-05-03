@@ -24,7 +24,7 @@ import list from "grommet-icons/img/list.svg";
 import previous from "grommet-icons/img/previous.svg";
 import data from "../data.json";
 import { nameToSlug } from "../utils";
-import { mainContainer, mainGrid } from "../styles.css";
+import { container, mainGrid } from "../styles.css";
 
 const categories = ["AI/ML", "Analytics", "Big Data"];
 
@@ -42,7 +42,7 @@ const Services = () => {
 
   return (
     <Page kind="full">
-      <PageContent className={mainContainer} gap="medium">
+      <PageContent className={container} gap="medium">
         <PageHeader
           // icon={<Box>hi</Box>}
           title="Services"
