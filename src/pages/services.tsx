@@ -68,6 +68,7 @@ const MainContent = () => {
 
   return (
     <ContentContainer>
+      <Heading level={2}>Discover services</Heading>
       <Box direction="row" gap="small" align="end">
         <Box width="medium">
           <FormField label="Region">
@@ -83,7 +84,7 @@ const MainContent = () => {
         categories.map((category, index) => (
           <Box key={index} gap="medium">
             <Heading level={3}>{category}</Heading>
-            <Grid columns="medium" gap="large">
+            <Grid columns="medium" gap="medium">
               {data
                 .filter((datum) => datum?.category === category)
                 .map((datum, index) => (

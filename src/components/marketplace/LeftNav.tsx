@@ -4,9 +4,6 @@ import { ContentContainer } from "../ContentContainer";
 export const LeftNav = () => {
   return (
     <ContentContainer>
-      <Text weight="medium" color="strong" size="large">
-        Discover and manage services
-      </Text>
       <Nav>
         <Box gap="small">
           <Button label="My services" />

@@ -19,17 +19,25 @@ export const Card = ({
     to={`/${nameToSlug(title)}`}
     style={{ textDecoration: "none", color: "inherit" }}
   >
-    <Box align="start" gap="small">
-      <Box flex={false}>
-        <img src={src} alt={`${title} logo`} />
+    <Box
+      align="start"
+      background="contrast"
+      round="xlarge"
+      pad="medium"
+      gap="medium"
+    >
+      <Box align="start" gap="small">
+        <Box flex={false}>
+          <img src={src} alt={`${title} logo`} />
+        </Box>
+        <Box>
+          <Heading level={level}>{title}</Heading>
+          <Text size="xsmall" color="weak">
+            {author}
+          </Text>
+        </Box>
+        <Paragraph>{description}</Paragraph>
       </Box>
-      <Box>
-        <Heading level={level}>{title}</Heading>
-        <Text size="xsmall" color="weak">
-          {author}
-        </Text>
-      </Box>
-      <Paragraph>{description}</Paragraph>
       <Icon src={linkNext} />
     </Box>
   </Link>
