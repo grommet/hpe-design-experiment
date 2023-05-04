@@ -555,9 +555,9 @@
     "@types/react" "*"
 
 "@types/react@*", "@types/react@^18.0.27":
-  version "18.2.2"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.2.tgz#2b6b1831d9c805b3790b6613becb5c8d2f3be479"
-  integrity sha512-4GZH3GLuqdZbDvOW5Pqqe7jgsDrKwkJfZMZLwFcgoz3CVDSvnMeG/Ihe44IbZ5Mqhh1fyTh5e44z6pNjIzzV8g==
+  version "18.2.5"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.5.tgz#f9403e1113b12b53f7edcdd9a900c10dd4b49a59"
+  integrity sha512-RuoMedzJ5AOh23Dvws13LU9jpZHIc/k90AgmK7CecAYeWmSr3553L4u5rk4sWAPBuQosfT7HmTfG4Rg5o4nGEA==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -912,7 +912,7 @@ globals@^11.1.0:
 
 "grommet-exp-theme@https://github.com/grommet/grommet-exp-theme/tarball/stable":
   version "1.0.0"
-  resolved "https://github.com/grommet/grommet-exp-theme/tarball/stable#a4e138252202f171abf67303dd77570c72fd02c7"
+  resolved "https://github.com/grommet/grommet-exp-theme/tarball/stable#c0d0299baa03877ea4ed6b556711942aa36bfd56"
   dependencies:
     "@vanilla-extract/css" "^1.9.5"
     "@vanilla-extract/recipes" "^0.3.0"
@@ -971,8 +971,8 @@ hoist-non-react-statics@^3.0.0, hoist-non-react-statics@^3.2.0:
 
 "hpe-design-tokens@https://github.com/grommet/hpe-design-tokens/tarball/stable":
   version "0.1.0"
-  uid "78e36169a2bd544ec88ac775c10b35f175b81613"
-  resolved "https://github.com/grommet/hpe-design-tokens/tarball/stable#78e36169a2bd544ec88ac775c10b35f175b81613"
+  uid a32e054525e14b29280ada9452625174e04f069c
+  resolved "https://github.com/grommet/hpe-design-tokens/tarball/stable#a32e054525e14b29280ada9452625174e04f069c"
 
 javascript-stringify@^2.0.1:
   version "2.1.0"
