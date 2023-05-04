@@ -9,7 +9,7 @@ export const container = style({
 export const mainGrid = style([
   responsiveContainerStyle({
     large: {
-      gridTemplateColumns: `${structuredTokens.content.medium} 1fr`,
+      gridTemplateColumns: `288px 1fr`,
     },
   }),
 ]);

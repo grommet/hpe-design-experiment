@@ -45,6 +45,15 @@ const Detail = () => {
                   <Markdown
                     components={{
                       p: <Paragraph size="large" />,
+                      li: (props: any) => (
+                        <li>
+                          {/* not best practice, temp for demo */}
+                          <Paragraph
+                            style={{ fontSize: "24px", margin: "12px" }}
+                            {...props}
+                          />
+                        </li>
+                      ),
                     }}
                   >
                     {page.overview}
