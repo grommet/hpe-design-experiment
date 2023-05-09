@@ -12,6 +12,7 @@ import {
   Page,
   PageContent,
   PageHeader,
+  Paragraph,
   Select,
 } from "grommet-exp";
 import { Card, ContentContainer, LeftNav } from "../components";
@@ -20,7 +21,7 @@ import list from "grommet-icons/img/list.svg";
 import previous from "grommet-icons/img/previous.svg";
 import data from "../data.json";
 import { nameToSlug } from "../utils";
-import { container, mainGrid } from "../styles.css";
+import { cardGrid, container, mainGrid } from "../styles.css";
 
 const categories = ["AI/ML", "Analytics", "Big Data"];
 
@@ -39,21 +40,7 @@ const Services = () => {
   return (
     <Page kind="wide">
       <PageContent className={container} gap="medium">
-        <PageHeader
-          title="Services"
-          parent={
-            <Link
-              to="/"
-              style={{ textDecoration: "inherit", color: "inherit" }}
-            >
-              <Anchor
-                href="/"
-                label="Dashboard"
-                icon={<Icon src={previous} />}
-              />
-            </Link>
-          }
-        />
+        <PageHeader title="Services" />
         <Grid className={mainGrid} align="start" gap="medium">
           <LeftNav />
           <MainContent />
@@ -67,60 +54,55 @@ const MainContent = () => {
   const [cardView, setCardView] = useState(false);
 
   return (
-    <ContentContainer>
-      <Heading level={2}>Discover services</Heading>
-      <Box direction="row" gap="small" align="end">
-        <Box width="medium">
-          <FormField label="Region">
-            <Select value="All regions" options={["All regions", "EMEAS"]} />
-          </FormField>
+    <ContentContainer className={container}>
+      <Box direction="row" gap="small" justify="between">
+        <Box gap="xsmall">
+          <Heading level={2}>Marketplace</Heading>
+          <Paragraph>Discover and manage services.</Paragraph>
         </Box>
-        <Button
-          icon={<Icon src={cardView ? list : apps} />}
-          onClick={() => setCardView(!cardView)}
-        />
+        <Box direction="row" gap="small" align="start" justify="between">
+          <Box width="small">
+            <Select
+              value="All regions"
+              options={["All regions", "Africa", "Asia Pacific", "Europe"]}
+            />
+          </Box>
+          <Button
+            icon={<Icon src={cardView ? list : apps} />}
+            onClick={() => setCardView(!cardView)}
+          />
+        </Box>
       </Box>
       {cardView ? (
-        categories.map((category, index) => (
-          <Box key={index} gap="medium">
-            <Heading level={3}>{category}</Heading>
-            <Grid columns="medium" gap="medium">
-              {data
-                .filter((datum) => datum?.category === category)
-                .map((datum, index) => (
-                  // TO DO change to level 4
-                  <Card key={index} data={datum} level={3} />
-                ))}
-            </Grid>
-          </Box>
-        ))
+        <Grid gap="xlarge" pad={{ top: "medium" }} className={cardGrid}>
+          {data.map((datum, index) => (
+            <Card key={index} data={datum} level={3} />
+          ))}
+        </Grid>
       ) : (
         <DataTable
           columns={[
             {
               property: "title",
               header: "Name",
+            },
+            { property: "author", header: "Publisher" },
+            { property: "region", header: "Region" },
+            {
+              property: "category",
+              header: "Type",
+              render: (datum) => datum.category || "--",
+            },
+            {
+              header: "Action",
               render: (datum) => (
                 <Link
                   to={`/${nameToSlug(datum.title)}`}
                   style={{ textDecoration: "none", color: "inherit" }}
                 >
-                  <Box direction="row" gap="small" align="center">
-                    <img src={datum.src} />
-                    {datum.title}
-                  </Box>
+                  <Button label="View details" kind="secondary" />
                 </Link>
               ),
-            },
-            { property: "author", header: "Publisher" },
-            {
-              property: "category",
-              header: "Category",
-              render: (datum) => datum.category || "--",
-            },
-            {
-              header: "Action",
-              render: () => <Button label="Launch" kind="secondary" />,
             },
           ]}
           data={data}

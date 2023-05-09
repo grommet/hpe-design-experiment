@@ -42,3 +42,17 @@ export const lowerGrid = style([
 //     },
 //   }),
 // ]);
+
+export const cardGrid = style([
+  responsiveContainerStyle({
+    small: {
+      gridTemplateColumns: "1fr",
+    },
+    medium: {
+      gridTemplateColumns: "repeat(2, 1fr)",
+    },
+    large: {
+      gridTemplateColumns: "repeat(3, 1fr)",
+    },
+  }),
+]);

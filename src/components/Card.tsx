@@ -1,7 +1,6 @@
-import { Box, Heading, Icon, Paragraph, Text } from "grommet-exp";
+import { Box, Button, Heading, Paragraph, Text } from "grommet-exp";
 import { nameToSlug } from "../utils";
 import { Link } from "react-router-dom";
-import linkNext from "grommet-icons/img/link-next.svg";
 
 export const Card = ({
   data: { title, author, description, src },
@@ -15,30 +14,21 @@ export const Card = ({
   };
   level?: 1 | 2 | 3;
 }) => (
-  <Link
-    to={`/${nameToSlug(title)}`}
-    style={{ textDecoration: "none", color: "inherit" }}
-  >
-    <Box
-      align="start"
-      background="contrast"
-      round="xlarge"
-      pad="medium"
-      gap="medium"
-    >
-      <Box align="start" gap="small">
-        <Box flex={false}>
-          <img src={src} alt={`${title} logo`} />
-        </Box>
-        <Box>
-          <Heading level={level}>{title}</Heading>
-          <Text size="xsmall" color="weak">
-            {author}
-          </Text>
-        </Box>
-        <Paragraph>{description}</Paragraph>
+  <Box align="start" gap="medium">
+    <Box align="start" gap="small">
+      <Box>
+        <Heading level={level}>{title}</Heading>
+        <Text size="xsmall" color="weak">
+          {author}
+        </Text>
       </Box>
-      <Icon src={linkNext} />
+      <Paragraph>{description}</Paragraph>
     </Box>
-  </Link>
+    <Link
+      to={`/${nameToSlug(title)}`}
+      style={{ textDecoration: "none", color: "inherit" }}
+    >
+      <Button label="View details" kind="secondary" />
+    </Link>
+  </Box>
 );

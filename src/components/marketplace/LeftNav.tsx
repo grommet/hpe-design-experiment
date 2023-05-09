@@ -8,7 +8,6 @@ export const LeftNav = () => {
         <Box gap="small">
           <Button label="My services" />
           <Button label="Subscriptions" />
-          <Button label="Catalog" />
           <Button label="Marketplace" active />
         </Box>
       </Nav>

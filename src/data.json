@@ -5,6 +5,7 @@
     "description": "World-class capabilities to support training at enterprise-scale.",
     "category": "AI/ML",
     "src": "/determined-ai.svg",
+    "region": "Asia Pacific",
     "details": {
       "availableRegions": ["US West"],
       "languages": ["English"],
@@ -23,6 +24,7 @@
     "author": "HPE",
     "description": "World-class capabilities to support training at enterprise-scale.",
     "src": "/networking-services.svg",
+    "region": "Europe",
     "details": {
       "availableRegions": ["US West"],
       "languages": ["English"],
@@ -41,6 +43,7 @@
     "author": "HPE",
     "description": "World-class capabilities to support training at enterprise-scale.",
     "src": "/wellness-insights.svg",
+    "region": "Africa",
     "details": {
       "availableRegions": ["US West"],
       "languages": ["English"],
@@ -60,6 +63,7 @@
     "description": "Bring data analysts, engineers, and scientists together. ",
     "category": "AI/ML",
     "src": "/dataiku.svg",
+    "region": "Asia Pacific",
     "details": {
       "availableRegions": ["US West"],
       "languages": ["English"],
@@ -79,6 +83,7 @@
     "description": "Bring data analysts, engineers, and scientists together.",
     "category": "AI/ML",
     "src": "/flywheel.svg",
+    "region": "Africa",
     "details": {
       "availableRegions": ["US West"],
       "languages": ["English"],
@@ -98,6 +103,7 @@
     "description": "Bring data analysts, engineers, and scientists together.",
     "category": "AI/ML",
     "src": "/h2o.svg",
+    "region": "Asia Pacific",
     "details": {
       "availableRegions": ["US West"],
       "languages": ["English"],
@@ -117,6 +123,7 @@
     "description": "Open source analytics engine for big data processing, with built-in modules for streaming, SQL, machine learning and graph processing.",
     "category": "Analytics",
     "src": "/apache.svg",
+    "region": "Europe",
     "details": {
       "availableRegions": ["US West"],
       "languages": ["English"],
@@ -136,6 +143,7 @@
     "description": "Open source analytics engine for big data processing, with built-in modules for streaming, SQL, machine learning and graph processing.",
     "category": "Analytics",
     "src": "/dremio.svg",
+    "region": "Asia Pacific",
     "details": {
       "availableRegions": ["US West"],
       "languages": ["English"],
@@ -155,6 +163,7 @@
     "description": "Open source analytics engine for big data processing, with built-in modules for streaming, SQL, machine learning and graph processing.",
     "category": "Analytics",
     "src": "/joulica.svg",
+    "region": "Asia Pacific",
     "details": {
       "availableRegions": ["US West"],
       "languages": ["English"],
@@ -174,6 +183,7 @@
     "description": "Built for data-intensive applications, SingleStore enables low-latency analytics without any compromises.",
     "category": "Big Data",
     "src": "/singlestore.svg",
+    "region": "Africa",
     "details": {
       "availableRegions": ["US West"],
       "languages": ["English"],
@@ -189,10 +199,11 @@
   },
   {
     "title": "StreamSets",
-    "author": "StreamSets Data Collector",
+    "author": "StreamSets Data",
     "description": "StreamSets speeds data integration for data lakes and data warehouses for hybrid and multi-cloud environments.",
     "category": "Big Data",
     "src": "/streamsets.svg",
+    "region": "Asia Pacific",
     "details": {
       "availableRegions": ["US West"],
       "languages": ["English"],
