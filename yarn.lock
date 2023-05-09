@@ -805,9 +805,9 @@ deepmerge@^4.2.2:
   integrity sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==
 
 electron-to-chromium@^1.4.284:
-  version "1.4.387"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.387.tgz#9a93ef1bd01b5898436026401ea3cabb1dd17d7a"
-  integrity sha512-tutLf+alr1/0YqJwKPdstVvDLmxmLb5xNyDLNS0RZmenHcEYk9qKfpKDCVZEKJ00JVbnayJm1MZAbYhYDFpcOw==
+  version "1.4.388"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.388.tgz#ec0d1be823d5b14da56d91ec5c57e84b4624ea45"
+  integrity sha512-xZ0y4zjWZgp65okzwwt00f2rYibkFPHUv9qBz+Vzn8cB9UXIo9Zc6Dw81LJYhhNt0G/vR1OJEfStZ49NKl0YxQ==
 
 esbuild@0.17.6:
   version "0.17.6"
@@ -912,7 +912,7 @@ globals@^11.1.0:
 
 "grommet-exp-theme@https://github.com/grommet/grommet-exp-theme/tarball/stable":
   version "1.0.0"
-  resolved "https://github.com/grommet/grommet-exp-theme/tarball/stable#c0d0299baa03877ea4ed6b556711942aa36bfd56"
+  resolved "https://github.com/grommet/grommet-exp-theme/tarball/stable#0e6d13c0e6a129e995ef0e340b8c31fee54aa462"
   dependencies:
     "@vanilla-extract/css" "^1.9.5"
     "@vanilla-extract/recipes" "^0.3.0"
@@ -971,8 +971,8 @@ hoist-non-react-statics@^3.0.0, hoist-non-react-statics@^3.2.0:
 
 "hpe-design-tokens@https://github.com/grommet/hpe-design-tokens/tarball/stable":
   version "0.1.0"
-  uid a32e054525e14b29280ada9452625174e04f069c
-  resolved "https://github.com/grommet/hpe-design-tokens/tarball/stable#a32e054525e14b29280ada9452625174e04f069c"
+  uid a032478a1959f0af7148a1210b050e1a5668750f
+  resolved "https://github.com/grommet/hpe-design-tokens/tarball/stable#a032478a1959f0af7148a1210b050e1a5668750f"
 
 javascript-stringify@^2.0.1:
   version "2.1.0"
