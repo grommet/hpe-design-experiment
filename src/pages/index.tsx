@@ -70,7 +70,6 @@ const Index = () => {
     <Page kind="wide">
       <PageContent className={container} gap="medium">
         <PageHeader
-          // icon={<Box>hi</Box>}
           title="Dashboard"
           actions={
             <Box direction="row-responsive" gap="small">

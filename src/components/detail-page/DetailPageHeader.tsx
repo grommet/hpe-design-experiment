@@ -14,11 +14,11 @@ export const DetailPageHeader = ({ page }: { page: PageType }) => {
   return (
     <Box background="front" round="xlarge" pad="medium">
       <PageHeader
-        // icon={
-        //   <Box width="xsmall">
-        //     <img src={page.src} alt={`${page.title} logo`} />
-        //   </Box>
-        // }
+        icon={
+          <Box width="xsmall">
+            <img src={page.src} alt={`${page.title} logo`} />
+          </Box>
+        }
         // TO DO can't have nested link
         parent={
           <Link
