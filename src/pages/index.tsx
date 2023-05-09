@@ -26,7 +26,7 @@ import {
   rightGridContainer,
   upperGrid,
 } from "../styles.css";
-
+import { Map } from "../components";
 const actions = [
   "Add devices",
   "Add subscriptions",
@@ -159,7 +159,9 @@ const MainContent = () => {
       <Grid gap="medium" className={lowerGrid}>
         <ContentContainer align="start">
           <Heading level={2}>Locations</Heading>
-          <Box>map goes here</Box>
+          <div style={{ height: "400px", width: "100%" }}>
+            <Map />
+          </div>
         </ContentContainer>
         <ContentContainer align="start">
           <Heading level={2}>Cost and usage</Heading>
