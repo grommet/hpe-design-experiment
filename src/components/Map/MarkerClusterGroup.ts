@@ -30,9 +30,13 @@ const updateMarkerClusterGroup = (
   // }
 };
 
-const MarkerClusterGroup = createPathComponent(
-  createMarkerClusterGroup,
-  updateMarkerClusterGroup
-);
+export interface CustomMarkerGroupProps extends L.MarkerClusterGroupOptions {
+  children?: React.ReactNode;
+}
+
+const MarkerClusterGroup = createPathComponent<
+  L.MarkerClusterGroup,
+  CustomMarkerGroupProps
+>(createMarkerClusterGroup, updateMarkerClusterGroup);
 
 export default MarkerClusterGroup;

@@ -55,7 +55,6 @@ export const Map = () => {
        &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors`}
           url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
         />
-        {/* TO DO fix typescript */}
         <MarketClusterGroup>
           {generateLocations(50, { center: geolocation, radius: 5 }).map(
             (location, index) => (
