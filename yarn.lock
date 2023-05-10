@@ -1063,7 +1063,7 @@ globals@^11.1.0:
 
 "grommet-exp@https://github.com/grommet/grommet-exp/tarball/stable":
   version "0.1.0"
-  resolved "https://github.com/grommet/grommet-exp/tarball/stable#441b514c913581cc0c9a63f9a80fecfadca3f1c7"
+  resolved "https://github.com/grommet/grommet-exp/tarball/stable#257a3f70efc6f78f1ef666edfb163ff8f1298e36"
   dependencies:
     grommet-exp-theme "https://github.com/grommet/grommet-exp-theme/tarball/stable"
     hpe-design-tokens "https://github.com/grommet/hpe-design-tokens/tarball/stable"
