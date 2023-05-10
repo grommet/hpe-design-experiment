@@ -5,7 +5,6 @@ import {
   Button,
   Grid,
   Heading,
-  Icon,
   Legend,
   Meter,
   Nav,
@@ -15,9 +14,9 @@ import {
   Paragraph,
   Text,
 } from "grommet-exp";
-import domain from "grommet-icons/img/domain.svg";
-import cloudDownload from "grommet-icons/img/cloud-download.svg";
-import database from "grommet-icons/img/database.svg";
+import { ReactComponent as Domain } from "grommet-icons/img/domain.svg";
+import { ReactComponent as CloudDownload } from "grommet-icons/img/cloud-download.svg";
+import { ReactComponent as Database } from "grommet-icons/img/database.svg";
 import { ContentContainer } from "../components";
 import {
   lowerGrid,
@@ -26,6 +25,7 @@ import {
   rightGridContainer,
   upperGrid,
 } from "../styles.css";
+import { Map } from "../components";
 
 const actions = [
   "Add devices",
@@ -40,17 +40,17 @@ const workflows = [
     title: "Build a web app",
     description: `Cloud networking for campus, branch, remote, data center, and
   IoT networks.`,
-    icon: domain,
+    icon: <Domain />,
   },
   {
     title: "Import an app",
     description: `Import an existing application onto the GreenLake Cloud Platform.`,
-    icon: cloudDownload,
+    icon: <CloudDownload />,
   },
   {
     title: "Create a database",
     description: `Monitor, manage and optimize consumption-based IT services, on-premises and in the cloud.`,
-    icon: database,
+    icon: <Database />,
   },
 ];
 
@@ -92,7 +92,7 @@ const Index = () => {
               <Heading level={2}>Workflows</Heading>
               {workflows.map((workflow, index) => (
                 <Box align="start" gap="xsmall" key={index}>
-                  <Icon src={workflow.icon} size="xlarge" />
+                  {workflow.icon}
                   <Text>{workflow.title}</Text>
                   <Paragraph size="small" color="weak">
                     {workflow.description}
@@ -112,31 +112,33 @@ const MainContent = () => {
   return (
     <Box gap="medium" className={rightGridContainer}>
       <Grid gap="medium" className={upperGrid}>
-        <ContentContainer align="start">
-          <Heading level={2}>Recommendations</Heading>
-          <Box gap="small">
-            <Text size="xlarge">126 Wellness recommendations</Text>
-            <Paragraph size="small">
-              Recommendations are based on your current environment and best
-              practices.
-            </Paragraph>
-            <Meter
-              thickness="small"
-              round
-              kind="qualitative"
-              values={[
-                { label: "High severity", value: 60 },
-                { label: "Medium severity", value: 35 },
-                { label: "Low severity", value: 5 },
-              ]}
-            />
-            <Legend
-              values={[
-                { label: "High severity", value: 60 },
-                { label: "Medium severity", value: 35 },
-                { label: "Low severity", value: 5 },
-              ]}
-            />
+        <ContentContainer align="start" justify="between">
+          <Box gap="medium">
+            <Heading level={2}>Recommendations</Heading>
+            <Box gap="small">
+              <Text size="xlarge">126 Wellness recommendations</Text>
+              <Paragraph size="small">
+                Recommendations are based on your current environment and best
+                practices.
+              </Paragraph>
+              <Meter
+                thickness="small"
+                round
+                kind="qualitative"
+                values={[
+                  { label: "High severity", value: 60 },
+                  { label: "Medium severity", value: 35 },
+                  { label: "Low severity", value: 5 },
+                ]}
+              />
+              <Legend
+                values={[
+                  { label: "High severity", value: 60 },
+                  { label: "Medium severity", value: 35 },
+                  { label: "Low severity", value: 5 },
+                ]}
+              />
+            </Box>
           </Box>
           <Button label="View all recommendations" kind="secondary" />
         </ContentContainer>
@@ -158,7 +160,9 @@ const MainContent = () => {
       <Grid gap="medium" className={lowerGrid}>
         <ContentContainer align="start">
           <Heading level={2}>Locations</Heading>
-          <Box>map goes here</Box>
+          <Box height="medium" width="full">
+            <Map />
+          </Box>
         </ContentContainer>
         <ContentContainer align="start">
           <Heading level={2}>Cost and usage</Heading>

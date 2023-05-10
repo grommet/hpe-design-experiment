@@ -59,8 +59,20 @@ const Detail = () => {
                     {page.overview}
                   </Markdown>
                   <Carousel>
-                    <img src="/overview-1.png" alt={`${page.title} preview`} />
-                    <img src="/overview-2.png" alt={`${page.title} preview`} />
+                    <Box round="large" overflow="hidden">
+                      <img
+                        src="/service-preview.jpg"
+                        alt={`${page.title} preview`}
+                        style={{ maxWidth: "100%" }}
+                      />
+                    </Box>
+                    <Box round="large" overflow="hidden">
+                      <img
+                        src="/service-preview-2.jpg"
+                        alt={`${page.title} preview`}
+                        style={{ maxWidth: "100%" }}
+                      />
+                    </Box>
                   </Carousel>
                 </Box>
               </Tab>

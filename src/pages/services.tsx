@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
-  Anchor,
   Box,
   Button,
   DataTable,
   Grid,
-  FormField,
   Heading,
   Icon,
   Page,
@@ -16,9 +14,8 @@ import {
   Select,
 } from "grommet-exp";
 import { Card, ContentContainer, LeftNav } from "../components";
-import apps from "grommet-icons/img/apps.svg";
-import list from "grommet-icons/img/list.svg";
-import previous from "grommet-icons/img/previous.svg";
+import { ReactComponent as Apps } from "grommet-icons/img/apps.svg";
+import { ReactComponent as List } from "grommet-icons/img/list.svg";
 import data from "../data.json";
 import { nameToSlug } from "../utils";
 import { cardGrid, container, mainGrid } from "../styles.css";
@@ -55,7 +52,7 @@ const MainContent = () => {
 
   return (
     <ContentContainer className={container}>
-      <Box direction="row" gap="small" justify="between">
+      <Box direction="row" align="start" gap="small" justify="between">
         <Box gap="xsmall">
           <Heading level={2}>Marketplace</Heading>
           <Paragraph>Discover and manage services.</Paragraph>
@@ -68,8 +65,9 @@ const MainContent = () => {
             />
           </Box>
           <Button
-            icon={<Icon src={cardView ? list : apps} />}
+            icon={cardView ? <List /> : <Apps />}
             onClick={() => setCardView(!cardView)}
+            style={{ lineHeight: 0 }}
           />
         </Box>
       </Box>
